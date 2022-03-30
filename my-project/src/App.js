@@ -10,7 +10,8 @@ import Form from "./components/Aula05/Form";
 function App() {
   return (
     <div className="App">
-      {/* <div>
+      <div>
+          {/* <div>
         <h1>Aula 01</h1>
         <HelloWorld />
         <Frase name="Marcos" />
@@ -32,6 +33,7 @@ function App() {
         <Events number={1}/>
         <Events number={2}/>
       </div> */}
+      </div>
         <Form />
     </div>
   );
