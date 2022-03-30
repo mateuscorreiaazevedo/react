@@ -1,6 +1,6 @@
-function Events({ number }) {
+function Events() {
 
-    function myEvent() {
+    function myEvent({ number }) {
         console.log(`Opa! Fui ativado!!! ${number}`)
     }
     
