@@ -7,7 +7,6 @@ function List() {
                 <Item brand="Toyota" year={2016} />
                 <Item brand="Honda" year={2010} />
                 <Item brand="Renault" year={2018} />
-                <Item/>
             </ul>
         </>
     )
