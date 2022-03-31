@@ -1,14 +1,17 @@
 import Button from "./Button"
+
 function EventoProps() {
-    function myEvent({ number }) {
-        console.log(`Fui ativado! ${number}`)
-    }
-    return (
-        <div>
-            <p>Clique para disparar um evento:</p>
-            <Button event={myEvent} text="Enviar" />
-        </div>
-    )
+
+  const EVENT1 = () => console.log(`o primeiro evento foi ativado`)
+  const EVENT2 = () => console.log(`o segundo evento foi ativado`)
+
+  return (
+    <div>
+      <p>Clique aqui para ativar o evento</p>
+      <Button place="Ative-me!" event={EVENT1}/>
+      <Button place="Ative-me!" event={EVENT2}/>
+    </div>
+  )
 }
 
 export default EventoProps

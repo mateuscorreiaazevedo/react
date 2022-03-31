@@ -1,12 +1,9 @@
 import "./App.css";
-import Form from "./components/Aula05/Form";
+import EventoProps from "./components/Aula06/EventoProps";
 function App() {
   return (
     <div className="App">
-      {/* <Events number={1}/>
-      <Events number={2}/> */}
-
-      <Form />
+      <EventoProps />
     </div>
   );
 }
