@@ -1,14 +1,13 @@
 import "./App.css";
-import EventoProps from "./components/Aula06/EventoProps";
+import { Conditionals } from "./components/Aula07/Conditionals";
 
-const App = () =>
+export default function App() {
+  
+  return (
+    <div className="App">
+      <h1>Renderização Condicional</h1>
+      <Conditionals />
+    </div>
+  )
 
-<div className="App">
-    <EventoProps />
-  </div>
-
-
-
-
-
-export default App;
+}
