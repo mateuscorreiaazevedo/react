@@ -1,7 +1,8 @@
 import { useState } from "react";
+
+
 const Form = () => {
   const USER = (e) => {
-    e.preventDefault();
     console.log(`Usuário ${name}; Senha ${password}`);
   };
 
@@ -11,7 +12,7 @@ const Form = () => {
   return (
     <div>
       <h1>Meu cadastro:</h1>
-      <form action="" onSubmit={USER}>
+      <form action="" method="get" onSubmit={USER}>
         <div>
           <label htmlFor="name">
             Nome
