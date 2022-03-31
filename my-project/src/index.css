@@ -4,8 +4,9 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
+h1, p {
   color: #fff;
   background-color: #444;
   border-radius: 10px;
+  padding: 1rem 0;
 }

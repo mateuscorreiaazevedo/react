@@ -1,45 +1,47 @@
-import Styles from './Form.module.css'
-import { useState } from 'react'
+import { useState } from "react";
+const Form = () => {
+  const USER = (e) => {
+    e.preventDefault();
+    console.log(`Usuário ${name}; Senha ${password}`);
+  };
 
-function Form() {
-    function userAccount(e) {
-        e.preventDefault()
-        console.log(`Usuário ${name} - Senha ${password}`)
-    }
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
 
-    const [name, setName] = useState()
-    const [password, setPassword] = useState()
-    
-    return (
+  return (
+    <div>
+      <h1>Meu cadastro:</h1>
+      <form action="" onSubmit={USER}>
         <div>
-            <h1>Cadastre-se!</h1>
-            <form action="" onSubmit={userAccount}>
-                <div>
-                    <label htmlFor="name">Nome de Usuário: </label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name='userName' 
-                        placeholder="Digite seu nome" 
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="password">Senha:</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name='userPassword' 
-                        placeholder='Digite sua Senha' 
-                        onChange={(e) => setPassword(e.target.value)}
-                        />
-                </div>
-                <div>
-                    <button type='submit'>Cadastrar</button>
-                </div>
-            </form>
+          <label htmlFor="name">
+            Nome
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Digite seu nome"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
         </div>
-    )
-}
+        <div>
+          <label htmlFor="password">
+            Senha
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Digite sua senha"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+        </div>
+        <div>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-export default Form
+export default Form;
