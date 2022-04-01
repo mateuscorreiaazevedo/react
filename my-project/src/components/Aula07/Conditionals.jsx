@@ -1,35 +1,27 @@
-import { useState } from 'react'
+import { useState } from "react"
+import { Form } from "./Form"
 
-export function Conditionals() {
+export const Conditionals = () => {
     const [email, setEmail] = useState()
     const [userEmail, setUserEmail] = useState()
-    
+
     function sendEmail(e) {
         e.preventDefault()
         setUserEmail(email)
     }
-
-    const clearEmail = () => setUserEmail('')
+    const CLEAR = () => setUserEmail('')
 
     return (
         <div>
-            <b>Cadastre seu email:</b>
-            <form action="">
-                <input 
-                    type="email"
-                    name="email" 
-                    id="email"
-                    placeholder="digite seu email aqui"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <button onClick={sendEmail} type="submit">Enviar</button>
-                {userEmail &&(
-                    <div>
-                        <p>O email do usuário é: <b>{userEmail}</b></p>
-                        <button onClick={clearEmail}>Limpar</button>
-                    </div>
-                )}
-            </form>
+            <h2>Cadastre-se</h2>
+            <Form 
+                send={sendEmail} 
+                user={userEmail}
+                clear={CLEAR} 
+                change={(e) => setEmail(e.target.value)} 
+            />
         </div>
     )
+
+
 }
